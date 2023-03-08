@@ -517,10 +517,8 @@ if __name__ == '__main__':
     from data_collect import DataCollect
 
     dataset = DataCollect()
-    dataset.combine_data_from_files(inference=False,
-                                    devices_path='../big_data_dump/History_devices_energy_data/locations.csv',
-                                    devices_hist_folder='../big_data_dump/History_devices_energy_data',
-                                    inference_path='testing/prediction_dataset.csv')
+    dataset.combine_data_from_files(devices_path='../big_data_dump/History_devices_energy_data/locations.csv',
+                                    devices_hist_folder='../big_data_dump/History_devices_energy_data')
 
     from dataset_processing import DatasetProcessing
 
@@ -528,7 +526,6 @@ if __name__ == '__main__':
     data = data_proc.preprocess_data(data=dataset.data,
                                      zipcode_scale=True,
                                      product_type=PRODUCT_TYPE,
-                                     weather_date='2023-01-17',
                                      inference=INFERENCE)
 
     feat_eng = FeatureEngineering()
