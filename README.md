@@ -1,6 +1,6 @@
 # Energy_prediction_RMC
 Pipeline for daily energy prediction of devices (only code, without data and model)  
-To run prediction use run.py (-l/--log is optional to print logs in file): `python3 run.py -f <input_data.csv> -l/--log`  
+To run prediction use run.py: `python3 run.py -f <input_data.csv> -l/--log` (-l/--log is optional to print logs in file)  
   
 Each block of pipeline is a class-mixin with appropriate method. Final class is in pipeline.py.  
 **In ./pipeline folder:**
