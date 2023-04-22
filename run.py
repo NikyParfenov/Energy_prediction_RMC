@@ -6,12 +6,12 @@ from time import time
 import sys
 
 # FOR RUN USE THE NEXT COMMAND: 'python3 run.py -f <path to .csv file>'
-# IF YOU WANT TO WRITE LOGS IN FILE ADD: '-l 1'
-# FOR EXAMPLE: 'python3 run.py -f data.csv -l 1'
+# IF YOU WANT TO WRITE LOGS IN FILE ADD: '-l' or '--log'
+# FOR EXAMPLE: 'python3 run.py -f testing_df.csv -l'
 try:
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", required=True, type=str)
-    parser.add_argument("-l", "--log", default=0, type=int)
+    parser.add_argument("-l", "--log", action='store_true')
     args = vars(parser.parse_args())
 
     if args['log']:
